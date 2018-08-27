@@ -1,0 +1,89 @@
+1. Выбрать все записи из таблицы Categories
+	select * from Categories
+
+2. Выбрать Id  и название категорий из таблицы Categories
+	select CategoryID, CategoryName from Categories
+
+3. Выбрать адреса из таблицы Suppliers
+	select Address from Suppliers
+
+4. Отсортировать все продукты по цене в порядке убывания
+	select * from Products order by Price desc
+
+5. Отсортировать таблицу заказов по CustomerID, а затем по ShipperID в одной запросе
+	select * from Orders order by CustomerID, ShipperID
+
+6. Выбрать все продукты, цена которых больше 40 и отсортировать по названию в обратном порядке
+	select * from Products 
+		where Price > 40
+	    	order by ProductName desc
+
+7. Выбрать все продукты, цена которых находится в диапазоне от 20 до 50 и отсортировать по юниту 
+	select * from Products 
+		where Price between 20 and 50
+    		order by Unit
+
+8. Выбрать все продукты, цена которых находится в диапазоне от 20 до 100 или CategoryID = 6
+	select * from Products 
+		where Price between 20 and 100
+    		or CategoryID = '6'
+
+9. Выбрать все продукты, цена которых равна 46, 53, 55 (2-мя способами)
+	1)    select * from Products 
+		where  	Price = '46'
+   		or	Price = '53'
+    		or	Price = '55'
+	2)    select * from Products 
+		where Price in ('46','53','55')
+
+10.Выбрать все продукты, кроме тех, цена которых равна 46, 53, 55 
+	select * from Products 
+		where not Price in ('46','53','55')	
+	
+11.Выбрать все продукты, в имени которых есть сочетание «han»
+	select * from Products 
+		where ProductName like '%han%'
+
+12.Вставить одну полную строку в таблицу Shippers
+	insert into Shippers (ShipperID,ShipperName,Phone)
+		values ('4','Belpost','(017) 293-5914')
+
+13.Вставить строку с 2-мя указанными значениями в таблицу Shippers
+	insert into Shippers (ShipperName, Phone)
+		values ('aaa','bbb');
+
+14.Вставить значения из таблицы Shippers в таблицу Categories
+	Error 1: could not execute statement due to a constraint failure 
+		(19 UNIQUE constraint failed: Categories.CategoryID)
+	insert into Categories (CategoryID,CategoryName,Description)
+		select  ShipperID,ShipperName,Phone
+	    	from    Shippers
+
+15.Вставить значения из таблицы Shippers c именем поставщика «Speedy Express» в таблицу Categories
+	Error 1: could not execute statement due to a constraint failure 
+		(19 UNIQUE constraint failed: Categories.CategoryID)
+	insert into Categories (CategoryID,CategoryName,Description)
+	select  ShipperID,ShipperName,Phone
+	    from    Shippers
+	    where   ShipperName = 'Speedy Express'
+
+16.Удалить из таблицы Shippers доставщика с именем «Speedy Express»
+	delete from [Shippers]
+		where ShipperName = 'Speedy Express'
+	
+17.Удалить продукты, цена которых меньше 50
+	delete from [Products]
+		where Price < 50
+
+18.Удалить все заказы
+	delete from Orders;
+
+19.Изменить в описании категории продукта с названием категории = «Beverages» на любое другое
+	update Categories 
+	  set Description = 'drinks'
+	  where CategoryName = 'Beverages'
+
+20.Изменить цену продукта с именем Chais на любую другую
+	update Products 
+	  set Price = '1'
+	  where ProductName = 'Chais'
