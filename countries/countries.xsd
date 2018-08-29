@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Refs" type="RefsType"/>
+  <xs:complexType name="CountryType">
+    <xs:sequence>
+      <xs:element name="Code">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="RUS"/>
+            <xs:enumeration value="USA"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Россия"/>
+            <xs:enumeration value="США"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Description">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Российская Федерация"/>
+            <xs:enumeration value="Соединенные Штаты Америки"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="CountriesType">
+    <xs:sequence>
+      <xs:element type="CountryType" name="Country" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RefsType">
+    <xs:sequence>
+      <xs:element type="CountriesType" name="Countries"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
