@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1536267608083" stop="1536267653502" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Test check up on icons</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1536267608163" stop="1536267653496" status="passed">
+            <name>Test positive</name>
+            <title>Test positive</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1536267608171" stop="1536267640006" status="passed">
+                    <name>Given I am on main page</name>
+                    <title>Given I am on main page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1536267640006" stop="1536267640514" status="passed">
+                    <name>When I check up on icons</name>
+                    <title>When I check up on icons</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1536267640515" stop="1536267640812" status="passed">
+                    <name>Then I see the icons</name>
+                    <title>Then I see the icons</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="Attachment Screenshot" source="f82f95da-5dc1-4082-9920-ec255079b11d-attachment.png" type="image/png"/>
+            </attachments>
+            <labels>
+                <label name="story" value="Test positive"/>
+                <label name="feature" value="Test check up on icons"/>
+                <label name="host" value="ubuntu-acer"/>
+                <label name="thread" value="14188@ubuntu-acer.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Test check up on icons"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
