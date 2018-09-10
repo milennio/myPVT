@@ -1,0 +1,42 @@
+https://connect.mail.ru/oauth/authorize?client_id=761608&response_type=token&redirect_uri=https://appsmail.ru/receiver.html&scope=messages
+
+GET UNREAD COUNT
+http://www.appsmail.ru/platform/api?method=messages.getUnreadCount&app_id=761608&session_key=ecf98034b23223b0b33dcbe6e5f8dfed&sig=315661902c7e19a59ca1d30fd38d3f15
+
+{"count":0}
+----------------------------
+friends.get
+&access_token=0c15e63e48046febd90926793f15a11b
+
+GET SIG=a24a7c715a815c029eb5fc79925cc69b
+12826667034100498388app_id=761608method=friends.getInvitationsCountsession_key=0c15e63e48046febd90926793f15a11be26cf0ee61f0abbfb18223da4c365f94
+
+http://www.appsmail.ru/platform/api?method=friends.get&app_id=761608&session_key=9c96fb268597fe2627916a68d6144430&sig=f2ce1955965153154bfbce852529e009
+
+["31528917373168690"]
+----------------------------
+friends.getAppUsers
+
+http://www.appsmail.ru/platform/api?method=friends.getAppUsers&app_id=761608&session_key=0c15e63e48046febd90926793f15a11b&sig=b41cacf4c8a86545c7d8886dfbab641c
+
+[]
+----------------------------
+friends.getOnline
+
+http://www.appsmail.ru/platform/api?method=friends.getOnline&app_id=761608&session_key=0c15e63e48046febd90926793f15a11b&sig=2defd536d90492947b6cfcbd8616c5da
+
+[]
+----------------------------
+friends.getInvitationsCount
+
+http://www.appsmail.ru/platform/api?method=friends.getInvitationsCount&app_id=761608&session_key=0c15e63e48046febd90926793f15a11b&sig=b4bdccd3747e0c096eaf1ff04ace29d1
+
+{"count":0}
+----------------------------
+https://connect.mail.ru/oauth/authorize?client_id=761608&response_type=token&redirect_uri=https://appsmail.ru/receiver.html&scope=guestbook
+access_token=e99553d82da35594545ac56addb03c5f'
+
+GET SIG=f1b875dc1b98a7caf7606769aaaad9a5
+12826667034100498388app_id=761608method=guestbook.postsession_key=e99553d82da35594545ac56addb03c5fe26cf0ee61f0abbfb18223da4c365f94
+
+http://www.appsmail.ru/platform/api?method=guestbook.post&app_id=761608&session_key=e99553d82da35594545ac56addb03c5f&sig=f1b875dc1b98a7caf7606769aaaad9a5&text=hello_world&uid=31528917373168690
