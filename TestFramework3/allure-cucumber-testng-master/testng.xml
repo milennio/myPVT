@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Mobile SMOKE TEST OLXID" verbose="2" parallel="tests" thread-count="1">
+
+    <!--<listeners>-->
+    <!--<listener class-name="listeners.RetryListeners" />-->
+    <!--</listeners>-->
+
+    <test name="Example Login Test" preserve-order="false">
+        <classes>
+            <class name="Steps.LoginPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Checking Icons Test" preserve-order="false">
+        <classes>
+            <class name="Steps.CheckIconsPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Mark Three Letters Test" preserve-order="false">
+        <classes>
+            <class name="Steps.CheckThreeLettersPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Clean Up Trash Bin Test" preserve-order="false">
+        <classes>
+            <class name="Steps.CleanUpTheTrashBinPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Create new mail Test" preserve-order="false">
+        <classes>
+            <class name="Steps.CreateEmailPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Delete a mail Test" preserve-order="false">
+        <classes>
+            <class name="Steps.DeleteEmailPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Not Spam Letter Page Test" preserve-order="false">
+        <classes>
+            <class name="Steps.NotSpamLetterPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Send a mail to a group Test" preserve-order="false">
+        <classes>
+            <class name="Steps.SendGroupEmailPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Remove letter into Spam folder Test" preserve-order="false">
+        <classes>
+            <class name="Steps.SpamLetterPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Uncheck Three Letters Test" preserve-order="false">
+        <classes>
+            <class name="Steps.UncheckThreeLettersPageTest"/>
+        </classes>
+    </test>
+
+</suite>
