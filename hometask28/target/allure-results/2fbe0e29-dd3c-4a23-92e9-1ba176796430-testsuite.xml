@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1536515499253" stop="1536515513383" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Test login page</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1536515499253" stop="1536515513382" status="passed">
+            <name>Test positive login page</name>
+            <title>Test positive login page</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1536515499254" stop="1536515502659" status="passed">
+                    <name>Given I am on the main application page</name>
+                    <title>Given I am on the main application page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1536515502659" stop="1536515503733" status="passed">
+                    <name>When I login as correct user</name>
+                    <title>When I login as correct user</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1536515503733" stop="1536515510038" status="passed">
+                    <name>Then I see logout link</name>
+                    <title>Then I see logout link</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Test positive login page"/>
+                <label name="feature" value="Test login page"/>
+                <label name="host" value="ubuntu-acer"/>
+                <label name="thread" value="8163@ubuntu-acer.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Test login page"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
